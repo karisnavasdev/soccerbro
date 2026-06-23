@@ -17,6 +17,7 @@
     <button class="nav-toggle" id="navToggle" aria-label="Menu">MENU</button>
     <div class="nav-links">
       <a href="#about" class="nav-link">ABOUT</a>
+      <a href="#worldcup" class="nav-link">WORLD CUP</a>
       <a href="#tokenomics" class="nav-link">TOKENOMICS</a>
       <a href="#how-to-buy" class="nav-link">HOW TO BUY</a>
       <a href="#chart" class="nav-link">CHART</a>
@@ -60,6 +61,19 @@
           <p>No VC, no insiders — just football bros on X and Telegram sharing memes, clips, and chart screenshots. Join us and let's run it.</p>
         </div>
       </div>
+    </section>
+
+    <!-- World Cup 2026 Schedule -->
+    <section id="worldcup" class="landing-section">
+      <h2 class="section-title">WORLD CUP 2026</h2>
+      <p class="wc-intro">Full match plan · USA · Canada · Mexico · Jun 11 – Jul 19</p>
+      <div id="wcOverview" class="wc-overview"></div>
+      <div class="wc-schedule-wrap pixel-box-sm">
+        <div id="wcDayStrip" class="wc-day-strip" role="tablist" aria-label="Match days"></div>
+        <div id="wcDayHeader" class="wc-day-header"></div>
+        <div id="wcMatchList" class="wc-match-list"></div>
+      </div>
+      <p class="chart-note">Kick-off times shown in your local timezone · Status updates every 30s</p>
     </section>
 
     <!-- Tokenomics -->
@@ -367,6 +381,8 @@
 
   <script src="js/config.js"></script>
   <script src="js/site.js"></script>
+  <script src="js/worldcup2026.js"></script>
+  <script src="js/worldcup.js"></script>
   <script src="js/background.js"></script>
   <script src="js/pixel.js"></script>
   <script src="js/players.js"></script>

@@ -433,6 +433,253 @@ body {
   line-height: 1.8;
 }
 
+/* World Cup 2026 schedule */
+.wc-intro {
+  text-align: center;
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
+  color: var(--px-cyan);
+  margin: -12px 0 20px;
+  letter-spacing: 1px;
+}
+
+.wc-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.wc-stat {
+  text-align: center;
+  padding: 14px 8px;
+  border: 3px solid #444;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 0 var(--px-shadow);
+}
+
+.wc-stat-val {
+  display: block;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  color: var(--px-accent);
+  margin-bottom: 6px;
+}
+
+.wc-stat-val.live { color: #ff4757; animation: wc-pulse 1.2s ease infinite; }
+.wc-stat-val.up { color: var(--px-cyan); }
+.wc-stat-val.ft { color: #888; }
+
+.wc-stat-lbl {
+  font-size: clamp(0.45rem, 1vw, 0.55rem);
+  color: #888;
+}
+
+@keyframes wc-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+.wc-schedule-wrap {
+  padding: 16px;
+  border: 3px solid var(--px-border);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.wc-day-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #333;
+  scrollbar-width: thin;
+}
+
+.wc-day-btn {
+  flex-shrink: 0;
+  font-family: var(--font-pixel);
+  font-size: clamp(0.4rem, 1vw, 0.5rem);
+  padding: 10px 12px;
+  border: 2px solid #444;
+  background: #1a1a2e;
+  color: #aaa;
+  cursor: pointer;
+  text-align: left;
+  min-width: 110px;
+  box-shadow: 2px 2px 0 var(--px-shadow);
+  transition: border-color 0.15s, transform 0.05s;
+}
+
+.wc-day-btn:hover {
+  border-color: var(--px-cyan);
+  transform: translate(-1px, -1px);
+}
+
+.wc-day-btn.active {
+  border-color: var(--px-accent);
+  background: #2a2a1e;
+  color: var(--px-accent);
+}
+
+.wc-day-btn.is-today:not(.active) {
+  border-color: var(--px-cyan);
+}
+
+.wc-day-label {
+  display: block;
+  margin-bottom: 6px;
+  color: inherit;
+}
+
+.wc-day-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.wc-count {
+  font-size: 0.38rem;
+  padding: 2px 4px;
+  border: 1px solid #555;
+}
+
+.wc-count.live { color: #ff4757; border-color: #ff4757; }
+.wc-count.ft { color: #888; }
+.wc-count.up { color: var(--px-cyan); border-color: var(--px-cyan); }
+
+.wc-day-header {
+  margin-bottom: 16px;
+}
+
+.wc-day-title {
+  font-size: clamp(0.65rem, 1.8vw, 0.85rem);
+  color: var(--px-accent);
+  margin-bottom: 6px;
+}
+
+.wc-today-badge {
+  font-size: 0.5rem;
+  color: var(--px-cyan);
+  border: 2px solid var(--px-cyan);
+  padding: 2px 6px;
+  vertical-align: middle;
+}
+
+.wc-day-summary {
+  font-size: clamp(0.5rem, 1.2vw, 0.6rem);
+  color: #888;
+  line-height: 1.8;
+}
+
+.wc-summary-live { color: #ff4757; }
+.wc-summary-ft { color: #aaa; }
+.wc-summary-up { color: var(--px-cyan); }
+
+.wc-match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wc-match {
+  padding: 14px 16px;
+  border: 3px solid #444;
+  background: rgba(26, 26, 62, 0.85);
+  box-shadow: 3px 3px 0 var(--px-shadow);
+  transition: border-color 0.2s;
+}
+
+.wc-match.is-live {
+  border-color: #ff4757;
+  box-shadow: 3px 3px 0 var(--px-shadow), 0 0 12px rgba(255, 71, 87, 0.25);
+}
+
+.wc-match-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.wc-match-time {
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
+  color: var(--px-accent);
+  min-width: 48px;
+}
+
+.wc-match-stage {
+  font-size: clamp(0.45rem, 1vw, 0.55rem);
+  color: #888;
+  flex: 1;
+}
+
+.wc-status {
+  font-size: clamp(0.42rem, 1vw, 0.52rem);
+  padding: 4px 8px;
+  border: 2px solid;
+}
+
+.wc-status-upcoming {
+  color: var(--px-cyan);
+  border-color: var(--px-cyan);
+}
+
+.wc-status-live {
+  color: #ff4757;
+  border-color: #ff4757;
+  animation: wc-pulse 1.2s ease infinite;
+}
+
+.wc-status-ft {
+  color: #888;
+  border-color: #666;
+}
+
+.wc-match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.wc-team {
+  font-size: clamp(0.55rem, 1.4vw, 0.75rem);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 100px;
+}
+
+.wc-team:last-child {
+  flex-direction: row-reverse;
+}
+
+.wc-flag {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.wc-vs {
+  font-size: clamp(0.45rem, 1vw, 0.55rem);
+  color: var(--px-red);
+}
+
+.wc-match-venue {
+  font-size: clamp(0.45rem, 1vw, 0.55rem);
+  color: #666;
+  text-align: center;
+}
+
+.wc-empty {
+  font-size: 0.6rem;
+  color: #666;
+  text-align: center;
+  padding: 24px;
+}
+
 @media (max-width: 768px) {
   .nav-toggle { display: block; }
   .nav-links {
@@ -449,4 +696,6 @@ body {
   .site-nav.nav-open .nav-links { display: flex; }
   .chart-wrap iframe { height: 400px; }
   .soccerbro-banner { display: none; }
+  .wc-overview { grid-template-columns: repeat(2, 1fr); }
+  .wc-day-btn { min-width: 96px; }
 }
