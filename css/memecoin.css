@@ -1,0 +1,451 @@
+/* Memecoin landing page */
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(8, 8, 24, 0.92);
+  border-bottom: 3px solid var(--px-border);
+  box-shadow: 0 4px 0 var(--px-shadow);
+  backdrop-filter: blur(8px);
+}
+
+.nav-brand {
+  font-size: clamp(0.45rem, 1.5vw, 0.65rem);
+  color: var(--px-accent);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--px-red);
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-link {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.28rem, 0.9vw, 0.38rem);
+  color: #aaa;
+  text-decoration: none;
+  padding: 8px 10px;
+  border: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--px-accent);
+  border-color: var(--px-accent);
+}
+
+.nav-link.nav-cta {
+  background: var(--px-red);
+  color: var(--px-accent);
+  border-color: var(--px-accent);
+}
+
+.nav-link.nav-cta:hover {
+  background: #ff4757;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.site-main {
+  position: relative;
+  z-index: 5;
+  padding-top: 52px;
+}
+
+.landing-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.section-title {
+  font-size: clamp(0.65rem, 2.2vw, 0.9rem);
+  color: var(--px-accent);
+  text-align: center;
+  margin-bottom: 24px;
+  text-shadow: 3px 3px 0 var(--px-red);
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--px-cyan);
+  margin: 12px auto 0;
+}
+
+/* Hero */
+#hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-badge {
+  font-size: clamp(0.35rem, 1vw, 0.45rem);
+  color: var(--px-cyan);
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  border: 2px solid var(--px-cyan);
+  background: rgba(78, 205, 196, 0.1);
+}
+
+.hero-title {
+  font-size: clamp(0.8rem, 3.5vw, 1.4rem);
+  color: var(--px-accent);
+  text-shadow: 4px 4px 0 var(--px-red), 6px 6px 0 #000;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.hero-tagline {
+  font-size: clamp(0.38rem, 1.2vw, 0.5rem);
+  color: #aaa;
+  line-height: 2;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.ca-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border: 3px solid var(--px-accent);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 4px 4px 0 var(--px-shadow);
+  margin-bottom: 24px;
+  max-width: 100%;
+}
+
+.ca-label {
+  font-size: clamp(0.32rem, 1vw, 0.42rem);
+  color: #888;
+}
+
+.ca-value {
+  font-size: clamp(0.35rem, 1.1vw, 0.48rem);
+  color: var(--px-cyan);
+  word-break: break-all;
+  max-width: 280px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.hero-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.38rem, 1.1vw, 0.48rem);
+  padding: 14px 22px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 4px 4px 0 var(--px-shadow);
+  transition: transform 0.05s;
+}
+
+.hero-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--px-shadow); }
+.hero-btn-primary { background: var(--px-red); color: var(--px-accent); border: 2px solid var(--px-accent); }
+.hero-btn-secondary { background: #333; color: #fff; border: 2px solid #fff; }
+.hero-btn-copy { background: var(--px-cyan); color: #111; border: 2px solid #fff; }
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.about-card {
+  padding: 20px;
+  border: 3px solid var(--px-border);
+  background: rgba(26, 26, 62, 0.85);
+  box-shadow: 4px 4px 0 var(--px-shadow);
+}
+
+.about-card h3 {
+  font-size: 0.45rem;
+  color: var(--px-cyan);
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: clamp(0.32rem, 0.95vw, 0.4rem);
+  color: #bbb;
+  line-height: 2;
+}
+
+/* Tokenomics */
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.token-stat {
+  text-align: center;
+  padding: 16px 10px;
+  border: 3px solid #444;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 0 var(--px-shadow);
+}
+
+.token-stat .val {
+  font-size: clamp(0.5rem, 1.8vw, 0.7rem);
+  color: var(--px-accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.token-stat .lbl {
+  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+  color: #888;
+}
+
+.tokenomics-bar-wrap {
+  margin-top: 16px;
+}
+
+.tokenomics-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+}
+
+.tokenomics-row span:first-child { min-width: 100px; color: #aaa; }
+.tokenomics-row span:last-child { min-width: 36px; text-align: right; color: var(--px-accent); }
+
+.bar-track {
+  flex: 1;
+  height: 12px;
+  background: #222;
+  border: 2px solid #444;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--px-cyan), var(--px-accent));
+}
+
+/* How to buy */
+.buy-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buy-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 3px solid var(--px-border);
+  background: rgba(26, 26, 62, 0.8);
+  box-shadow: 3px 3px 0 var(--px-shadow);
+}
+
+.step-num {
+  font-size: 0.7rem;
+  color: var(--px-red);
+  min-width: 32px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.buy-step h3 {
+  font-size: 0.42rem;
+  color: var(--px-accent);
+  margin-bottom: 8px;
+}
+
+.buy-step p {
+  font-size: clamp(0.32rem, 0.95vw, 0.4rem);
+  color: #aaa;
+  line-height: 2;
+}
+
+.buy-step a {
+  color: var(--px-cyan);
+}
+
+/* Chart */
+.chart-wrap {
+  border: 4px solid var(--px-border);
+  background: #0d0d1a;
+  box-shadow: 6px 6px 0 var(--px-shadow);
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.chart-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+.chart-note {
+  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+  color: #666;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Game section */
+#play {
+  max-width: 100%;
+  padding: 48px 0 24px;
+}
+
+.game-section-header {
+  text-align: center;
+  padding: 0 20px 20px;
+}
+
+.game-section-header p {
+  font-size: clamp(0.32rem, 1vw, 0.42rem);
+  color: #888;
+  margin-top: 10px;
+  line-height: 2;
+}
+
+#app {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 40px;
+}
+
+#app::before {
+  background: rgba(8, 8, 24, 0.55);
+}
+
+.soccerbro-banner {
+  top: 58px;
+}
+
+/* Socials */
+.socials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  min-width: 240px;
+  border: 3px solid var(--px-border);
+  background: rgba(26, 26, 62, 0.9);
+  box-shadow: 4px 4px 0 var(--px-shadow);
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.05s, border-color 0.15s;
+}
+
+.social-card:hover {
+  transform: translate(-2px, -2px);
+  border-color: var(--px-accent);
+  box-shadow: 6px 6px 0 var(--px-shadow);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  text-align: center;
+}
+
+.social-card h3 {
+  font-size: 0.42rem;
+  color: var(--px-accent);
+  margin-bottom: 4px;
+}
+
+.social-card p {
+  font-size: 0.28rem;
+  color: #888;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 32px 20px 48px;
+  border-top: 3px solid #333;
+  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+  color: #555;
+  line-height: 2;
+}
+
+.site-footer a { color: var(--px-cyan); }
+
+.disclaimer {
+  max-width: 640px;
+  margin: 16px auto 0;
+  font-size: 0.26rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(8, 8, 24, 0.98);
+    border-bottom: 3px solid #fff;
+    padding: 12px;
+  }
+  .site-nav.nav-open .nav-links { display: flex; }
+  .chart-wrap iframe { height: 400px; }
+  .soccerbro-banner { display: none; }
+}
