@@ -21,7 +21,8 @@ body {
 }
 
 .nav-brand {
-  font-size: clamp(0.45rem, 1.5vw, 0.65rem);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.65rem, 2vw, 0.9rem);
   color: var(--px-accent);
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--px-red);
@@ -35,8 +36,8 @@ body {
 }
 
 .nav-link {
-  font-family: 'Press Start 2P', monospace;
-  font-size: clamp(0.28rem, 0.9vw, 0.38rem);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.5rem, 1.2vw, 0.65rem);
   color: #aaa;
   text-decoration: none;
   padding: 8px 10px;
@@ -65,8 +66,8 @@ body {
   background: none;
   border: 2px solid #fff;
   color: #fff;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
   padding: 8px 10px;
   cursor: pointer;
 }
@@ -84,7 +85,7 @@ body {
 }
 
 .section-title {
-  font-size: clamp(0.65rem, 2.2vw, 0.9rem);
+  font-size: clamp(0.9rem, 2.8vw, 1.25rem);
   color: var(--px-accent);
   text-align: center;
   margin-bottom: 24px;
@@ -112,7 +113,7 @@ body {
 }
 
 .hero-badge {
-  font-size: clamp(0.35rem, 1vw, 0.45rem);
+  font-size: clamp(0.55rem, 1.4vw, 0.7rem);
   color: var(--px-cyan);
   margin-bottom: 16px;
   padding: 6px 12px;
@@ -121,7 +122,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(0.8rem, 3.5vw, 1.4rem);
+  font-size: clamp(1.1rem, 4.5vw, 2rem);
   color: var(--px-accent);
   text-shadow: 4px 4px 0 var(--px-red), 6px 6px 0 #000;
   margin-bottom: 12px;
@@ -129,7 +130,7 @@ body {
 }
 
 .hero-tagline {
-  font-size: clamp(0.38rem, 1.2vw, 0.5rem);
+  font-size: clamp(0.6rem, 1.6vw, 0.8rem);
   color: #aaa;
   line-height: 2;
   max-width: 520px;
@@ -151,12 +152,12 @@ body {
 }
 
 .ca-label {
-  font-size: clamp(0.32rem, 1vw, 0.42rem);
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
   color: #888;
 }
 
 .ca-value {
-  font-size: clamp(0.35rem, 1.1vw, 0.48rem);
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
   color: var(--px-cyan);
   word-break: break-all;
   max-width: 280px;
@@ -170,8 +171,8 @@ body {
 }
 
 .hero-btn {
-  font-family: 'Press Start 2P', monospace;
-  font-size: clamp(0.38rem, 1.1vw, 0.48rem);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.6rem, 1.5vw, 0.75rem);
   padding: 14px 22px;
   border: none;
   cursor: pointer;
@@ -201,13 +202,13 @@ body {
 }
 
 .about-card h3 {
-  font-size: 0.45rem;
+  font-size: 0.7rem;
   color: var(--px-cyan);
   margin-bottom: 12px;
 }
 
 .about-card p {
-  font-size: clamp(0.32rem, 0.95vw, 0.4rem);
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
   color: #bbb;
   line-height: 2;
 }
@@ -229,14 +230,14 @@ body {
 }
 
 .token-stat .val {
-  font-size: clamp(0.5rem, 1.8vw, 0.7rem);
+  font-size: clamp(0.75rem, 2.2vw, 1rem);
   color: var(--px-accent);
   display: block;
   margin-bottom: 8px;
 }
 
 .token-stat .lbl {
-  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+  font-size: clamp(0.5rem, 1.2vw, 0.65rem);
   color: #888;
 }
 
@@ -249,7 +250,7 @@ body {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
-  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+  font-size: clamp(0.5rem, 1.2vw, 0.65rem);
 }
 
 .tokenomics-row span:first-child { min-width: 100px; color: #aaa; }
@@ -285,20 +286,20 @@ body {
 }
 
 .step-num {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: var(--px-red);
   min-width: 32px;
   text-shadow: 2px 2px 0 #000;
 }
 
 .buy-step h3 {
-  font-size: 0.42rem;
+  font-size: 0.7rem;
   color: var(--px-accent);
   margin-bottom: 8px;
 }
 
 .buy-step p {
-  font-size: clamp(0.32rem, 0.95vw, 0.4rem);
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
   color: #aaa;
   line-height: 2;
 }
@@ -324,7 +325,7 @@ body {
 }
 
 .chart-note {
-  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+  font-size: clamp(0.5rem, 1.2vw, 0.65rem);
   color: #666;
   text-align: center;
   margin-top: 12px;
@@ -342,7 +343,7 @@ body {
 }
 
 .game-section-header p {
-  font-size: clamp(0.32rem, 1vw, 0.42rem);
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
   color: #888;
   margin-top: 10px;
   line-height: 2;
@@ -403,13 +404,13 @@ body {
 }
 
 .social-card h3 {
-  font-size: 0.42rem;
+  font-size: 0.7rem;
   color: var(--px-accent);
   margin-bottom: 4px;
 }
 
 .social-card p {
-  font-size: 0.28rem;
+  font-size: 0.5rem;
   color: #888;
 }
 
@@ -417,7 +418,7 @@ body {
   text-align: center;
   padding: 32px 20px 48px;
   border-top: 3px solid #333;
-  font-size: clamp(0.28rem, 0.85vw, 0.35rem);
+  font-size: clamp(0.5rem, 1.2vw, 0.65rem);
   color: #555;
   line-height: 2;
 }
@@ -427,7 +428,7 @@ body {
 .disclaimer {
   max-width: 640px;
   margin: 16px auto 0;
-  font-size: 0.26rem;
+  font-size: 0.45rem;
   color: #444;
   line-height: 1.8;
 }

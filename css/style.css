@@ -13,16 +13,24 @@
   --px-cyan: #4ecdc4;
   --px-green: #2d6a1e;
   --px-shadow: #000;
+  --font-pixel: 'Press Start 2P', monospace;
+}
+
+html {
+  font-size: 20px;
 }
 
 body {
   background: #0a0a18;
   overflow: hidden;
-  font-family: 'Press Start 2P', monospace;
+  font-family: var(--font-pixel);
+  font-size: 14px;
   color: #fff;
   user-select: none;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Pixel football playground background canvas */
@@ -49,7 +57,7 @@ body {
 }
 
 .soccerbro-text {
-  font-size: clamp(0.5rem, 2vw, 0.95rem);
+  font-size: clamp(0.75rem, 2.5vw, 1.2rem);
   letter-spacing: 0.12em;
   position: relative;
   z-index: 2;
@@ -234,7 +242,7 @@ body {
 }
 
 .title {
-  font-size: clamp(0.9rem, 3.5vw, 1.8rem);
+  font-size: clamp(1.2rem, 4.5vw, 2.2rem);
   color: var(--px-accent);
   text-shadow:
     3px 3px 0 var(--px-red),
@@ -244,14 +252,14 @@ body {
 }
 
 .subtitle {
-  font-size: clamp(0.4rem, 1.2vw, 0.55rem);
+  font-size: clamp(0.65rem, 1.6vw, 0.85rem);
   color: var(--px-cyan);
   margin-top: 8px;
   letter-spacing: 1px;
 }
 
 h2 {
-  font-size: clamp(0.65rem, 2vw, 0.95rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.25rem);
   color: var(--px-accent);
   margin-bottom: 16px;
   text-shadow: 2px 2px 0 var(--px-shadow);
@@ -265,8 +273,8 @@ h2 {
 }
 
 .btn {
-  font-family: 'Press Start 2P', monospace;
-  font-size: clamp(0.45rem, 1.2vw, 0.58rem);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.65rem, 1.5vw, 0.8rem);
   padding: 12px 24px;
   border: none;
   background: #333;
@@ -318,19 +326,19 @@ h2 {
   background: #662222;
   color: #ff8888;
   margin-top: 12px;
-  font-size: 0.4rem;
+  font-size: 0.6rem;
 }
 
 .controls-hint {
   margin-top: 16px;
-  font-size: clamp(0.32rem, 0.9vw, 0.42rem);
+  font-size: clamp(0.55rem, 1.2vw, 0.7rem);
   color: #888;
   line-height: 2.2;
   max-width: 420px;
 }
 
 .wins-display {
-  font-size: clamp(0.38rem, 1vw, 0.5rem);
+  font-size: clamp(0.6rem, 1.3vw, 0.75rem);
   color: var(--px-cyan);
   margin-top: 8px;
 }
@@ -348,7 +356,7 @@ h2 {
 .player-pick { min-width: 140px; }
 
 .player-pick h3 {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   margin-bottom: 8px;
   color: var(--px-cyan);
 }
@@ -363,7 +371,7 @@ h2 {
 }
 
 .char-stats {
-  font-size: 0.36rem;
+  font-size: 0.55rem;
   line-height: 1.9;
   color: #aaa;
   text-align: left;
@@ -371,7 +379,7 @@ h2 {
 
 .kit-picker {
   margin-top: 8px;
-  font-size: 0.36rem;
+  font-size: 0.55rem;
 }
 
 .kit-picker input[type="color"] {
@@ -396,7 +404,7 @@ h2 {
   border: 3px solid #444;
   background: #1a1a2e;
   cursor: pointer;
-  font-size: 0.32rem;
+  font-size: 0.5rem;
   box-shadow: 2px 2px 0 var(--px-shadow);
   transition: transform 0.05s;
 }
@@ -437,14 +445,14 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.42rem;
+  font-size: 0.65rem;
   margin-bottom: 14px;
   gap: 12px;
 }
 
 .setting-row select {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.38rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
   background: #222;
   color: var(--px-accent);
   border: 2px solid #555;
@@ -479,14 +487,14 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  font-size: clamp(0.7rem, 2.5vw, 1.2rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .score-p1 { color: var(--px-cyan); }
 .score-p2 { color: var(--px-red); }
 
 .timer {
-  font-size: clamp(0.45rem, 1.5vw, 0.7rem);
+  font-size: clamp(0.65rem, 2vw, 0.95rem);
   color: var(--px-accent);
   min-width: 50px;
 }
@@ -494,14 +502,14 @@ h2 {
 .player-names {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.32rem, 1vw, 0.42rem);
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
   color: #888;
   margin-top: 4px;
 }
 
 #tournamentInfo {
   color: var(--px-accent);
-  font-size: 0.36rem;
+  font-size: 0.55rem;
 }
 
 .stamina-bars {
@@ -529,7 +537,7 @@ h2 {
 
 .message {
   text-align: center;
-  font-size: clamp(0.45rem, 1.5vw, 0.65rem);
+  font-size: clamp(0.65rem, 2vw, 0.9rem);
   color: var(--px-accent);
   margin-top: 6px;
   text-shadow: 2px 2px 0 #000;
@@ -573,7 +581,7 @@ h2 {
 }
 
 .overlay-content p {
-  font-size: clamp(0.4rem, 1.2vw, 0.55rem);
+  font-size: clamp(0.65rem, 1.6vw, 0.85rem);
   margin-top: 10px;
 }
 
@@ -593,14 +601,14 @@ h2 {
 .unlock-char canvas { image-rendering: pixelated; }
 
 .formation-hint {
-  font-size: clamp(0.32rem, 0.9vw, 0.42rem);
+  font-size: clamp(0.55rem, 1.2vw, 0.7rem);
   color: var(--px-cyan);
   margin: 8px 0;
   letter-spacing: 0.5px;
 }
 
 .mode-desc {
-  font-size: clamp(0.35rem, 1vw, 0.45rem);
+  font-size: clamp(0.55rem, 1.3vw, 0.7rem);
   color: #888;
   margin-bottom: 14px;
   max-width: 420px;
@@ -624,7 +632,7 @@ h2 {
 }
 
 .country-pick h3 {
-  font-size: 0.45rem;
+  font-size: 0.65rem;
   color: var(--px-cyan);
   margin-bottom: 8px;
 }
@@ -645,13 +653,13 @@ h2 {
 }
 
 .country-preview .preview-name {
-  font-size: 0.42rem;
+  font-size: 0.65rem;
   color: var(--px-accent);
   margin-top: 4px;
 }
 
 .country-preview .preview-rating {
-  font-size: 0.35rem;
+  font-size: 0.55rem;
   color: #888;
   margin-top: 4px;
 }
@@ -669,7 +677,7 @@ h2 {
   border: 2px solid #444;
   background: #1a1a2e;
   cursor: pointer;
-  font-size: 0.28rem;
+  font-size: 0.5rem;
   text-align: center;
   transition: transform 0.05s;
 }
@@ -754,19 +762,19 @@ h2 {
 .challenge-info { flex: 1; }
 
 .challenge-info h4 {
-  font-size: 0.45rem;
+  font-size: 0.65rem;
   color: var(--px-accent);
   margin-bottom: 4px;
 }
 
 .challenge-info .challenge-sub {
-  font-size: 0.32rem;
+  font-size: 0.5rem;
   color: var(--px-red);
   margin-bottom: 4px;
 }
 
 .challenge-info p {
-  font-size: 0.28rem;
+  font-size: 0.5rem;
   color: #888;
   line-height: 1.6;
 }
@@ -781,11 +789,11 @@ h2 {
 
 #challengeHud {
   color: var(--px-accent);
-  font-size: 0.36rem;
+  font-size: 0.55rem;
 }
 
 .unlock-reward {
-  font-size: 0.42rem;
+  font-size: 0.65rem;
   color: var(--px-cyan);
   margin: 10px 0;
   line-height: 1.8;
@@ -798,7 +806,7 @@ h2 {
     top: 8px;
   }
   .soccerbro-text {
-    font-size: 0.4rem;
+    font-size: 0.65rem;
     letter-spacing: 0.06em;
   }
   .char-grid { grid-template-columns: repeat(2, 1fr); }

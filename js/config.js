@@ -1,7 +1,7 @@
 // Token config — update CA when contract is live
 const TOKEN_CONFIG = {
   name: 'Soccerbro',
-  ticker: 'SOCCERPUMP',
+  ticker: 'SOCCERBRO',
   ca: 'soccerpump',
   chain: 'solana',
   dexscreener: 'https://dexscreener.com/solana/soccerpump',
