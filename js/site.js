@@ -3,7 +3,7 @@
   'use strict';
 
   const cfg = typeof TOKEN_CONFIG !== 'undefined' ? TOKEN_CONFIG : {
-    ticker: 'SOCCERBRO', ca: 'soccerpump', dexscreener: 'https://dexscreener.com/solana/soccerpump',
+    ticker: 'SOCCERBRO', ca: '4NborgnPENJYf7U2ENHdmRvzsVftZhWo2Lan8Rv6pump', dexscreener: 'https://dexscreener.com/solana/4NborgnPENJYf7U2ENHdmRvzsVftZhWo2Lan8Rv6pump',
     twitter: 'https://x.com/worldsoccerbro', telegram: 'https://t.me/worldsoccerbro'
   };
 
